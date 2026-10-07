@@ -1,28 +1,34 @@
-# AguiTech
+# AguiTech — Ideas en movimiento
 
-Bienvenido al repositorio **aguitech_chatgpt** de [AguiTech](https://github.com/aguitech).
+Sitio de AguiTech con cinco secciones: Inicio, Universo, Enfoque, Laboratorio y Contacto. Incluye una escultura 3D interactiva, órbitas y partículas animadas, navegación por secciones y un diseño adaptable a móviles.
 
-## Punto de partida
+## Desarrollo local
 
-Este repositorio comienza como un espacio para documentar el proyecto y construir su primera implementación. El primer paso es dejar claras su identidad, sus objetivos y la experiencia que lo respalda.
+El sitio usa HTML, CSS y JavaScript, con tipografías alojadas en el propio repositorio. No necesita instalar dependencias ni compilar.
 
-## Qué encontrarás aquí
+```bash
+python -m http.server 8000 --bind 127.0.0.1
+```
 
-La documentación se organizará alrededor de cuatro preguntas:
+Abre el servidor en tu navegador. Arrastra la escena para girarla y usa el botón de pausa para detenerla. La escena respeta la preferencia de movimiento reducido y deja de actualizarse cuando sale de pantalla.
 
-- **Trayectoria:** ¿qué experiencia y aprendizajes dieron origen a AguiTech?
-- **Proyectos:** ¿qué se ha construido, qué problema resuelve y qué resultados obtuvo?
-- **Capacidades:** ¿qué conocimientos y habilidades se pueden demostrar con esos proyectos?
-- **Dirección:** ¿qué se quiere construir ahora y para quién?
+## Publicación en GitHub Pages
 
-## Estado actual
+El flujo `.github/workflows/pages.yml` publica el sitio con cada push a `main`. En GitHub, selecciona **Settings → Pages → Source → GitHub Actions** si Pages aún no está habilitado. El flujo intenta habilitarlo automáticamente; esa operación puede requerir permisos administrativos que el token de Actions no tenga.
 
-El repositorio está en su etapa inicial. Todavía no contiene una aplicación, dependencias ni una suite de pruebas. Las instrucciones de instalación y ejecución se incorporarán cuando exista una implementación.
+Consulta **Actions → Deploy AguiTech to GitHub Pages** para comprobar el resultado. La dirección prevista es `https://aguitech.github.io/aguitech_chatgpt/`; solo estará disponible cuando el despliegue termine correctamente.
 
-La presentación de la trayectoria y el portafolio se completará con información y referencias proporcionadas por su autor.
+## Fuentes y contenido
 
-## Cómo desarrollar la documentación
+- [Web de AguiTech](https://aguitech.com)
+- [Currículum 2026](https://aguitech.com/CurriculumVitae/2026/ESP/)
 
-Para cada proyecto, registrar el problema, la aportación personal, las herramientas utilizadas y los resultados. Añadir enlaces a código, demostraciones o publicaciones cuando estén disponibles.
+La trayectoria personal y los proyectos históricos están pendientes de documentar a partir de estas fuentes. El sitio enlaza al CV y no atribuye logros que no se hayan verificado.
 
-Para presentar capacidades, distinguir la experiencia demostrada, los conocimientos en desarrollo y los objetivos futuros. Esto permitirá convertir la trayectoria en una presentación concreta y verificable.
+## Archivos
+
+- `index.html`: contenido y estructura.
+- `styles.css`: diseño, animaciones y adaptación a móviles.
+- `app.js`: geometría 3D, proyección en perspectiva e interacción.
+- `assets/fonts/`: DM Sans y Space Grotesk, con sus licencias SIL Open Font License.
+- `.github/workflows/pages.yml`: publicación automática.
